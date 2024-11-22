@@ -138,8 +138,8 @@ void leitura(int acel){
     int accAngleY = (atan(-1 * ax / sqrt(pow(ay, 2) + pow(az, 2))) * 180 / PI);
 
     previousTime = currentTime;
-    currentTime = micros();
-    elapsedTime = (currentTime - previousTime) / 1000000.0f;
+    currentTime = millis();
+    elapsedTime = (currentTime - previousTime) / 1000.0;
     
     gyroAngleX += gx * elapsedTime;
     gyroAngleY += gy * elapsedTime;
